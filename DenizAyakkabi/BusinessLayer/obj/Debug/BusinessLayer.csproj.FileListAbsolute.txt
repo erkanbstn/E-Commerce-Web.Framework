@@ -1,0 +1,17 @@
+C:\Users\Geo\Desktop\Visual Projects\DenizAyakkabi\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\Geo\Desktop\Visual Projects\DenizAyakkabi\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\Geo\Desktop\Visual Projects\DenizAyakkabi\BusinessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Geo\Desktop\Visual Projects\DenizAyakkabi\BusinessLayer\bin\Debug\EntityLayer.dll
+C:\Users\Geo\Desktop\Visual Projects\DenizAyakkabi\BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Geo\Desktop\Visual Projects\DenizAyakkabi\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Geo\Desktop\Visual Projects\DenizAyakkabi\BusinessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\Geo\Desktop\Visual Projects\DenizAyakkabi\BusinessLayer\bin\Debug\EntityLayer.pdb
+C:\Users\Geo\Desktop\Visual Projects\DenizAyakkabi\BusinessLayer\bin\Debug\EntityLayer.dll.config
+C:\Users\Geo\Desktop\Visual Projects\DenizAyakkabi\BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Geo\Desktop\Visual Projects\DenizAyakkabi\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\Geo\Desktop\Visual Projects\DenizAyakkabi\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Geo\Desktop\Visual Projects\DenizAyakkabi\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+C:\Users\Geo\Desktop\Visual Projects\DenizAyakkabi\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Geo\Desktop\Visual Projects\DenizAyakkabi\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Geo\Desktop\Visual Projects\DenizAyakkabi\BusinessLayer\bin\Debug\FluentValidation.dll
+C:\Users\Geo\Desktop\Visual Projects\DenizAyakkabi\BusinessLayer\bin\Debug\FluentValidation.xml

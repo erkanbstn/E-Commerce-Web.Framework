@@ -1,0 +1,60 @@
+﻿@model EntityLayer.Concrete.About
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<h2 style="margin-left:15px">Hakkımızda Düzenleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("UpdateAbout", "About", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<div style="margin-left:15px" class="form-group">
+    @Html.Label("ID")
+    @Html.TextBoxFor(n => n.AboutID, new { @class = "form-control" })
+    <br />
+    <br />
+    @Html.Label("Açıklama 1")
+    @Html.TextBoxFor(n => n.Description, new { @class = "form-control" })
+    @Html.ValidationMessageFor(n => n.Description)
+    <br />
+    <br />
+    @Html.Label("Açıklama 2")
+    @Html.TextBoxFor(n => n.Description2, new { @class = "form-control" })
+    @Html.ValidationMessageFor(n => n.Description2)
+    <br />
+    <br />
+    @Html.Label("Başlık 1")
+    @Html.TextBoxFor(n => n.Title1, new { @class = "form-control" })
+    @Html.ValidationMessageFor(n => n.Title1)
+    <br />
+    <br />
+    @Html.Label("Başlık 2")
+    @Html.TextBoxFor(n => n.Title2, new { @class = "form-control" })
+    @Html.ValidationMessageFor(n => n.Title2)
+    <br />
+    <br />
+    @Html.Label("Başlık 3")
+    @Html.TextBoxFor(n => n.Title3, new { @class = "form-control" })
+    @Html.ValidationMessageFor(n => n.Title3)
+    <br />
+    <br />
+    @Html.Label("Başlık 4")
+    @Html.TextBoxFor(n => n.Title4, new { @class = "form-control" })
+    @Html.ValidationMessageFor(n => n.Title4)
+    <br />
+    <br />
+    @Html.Label("Başlık 5")
+    @Html.TextBoxFor(n => n.Title5, new { @class = "form-control" })
+    @Html.ValidationMessageFor(n => n.Title5)
+    <br />
+    <br />
+    <input class="form-control" type="file" name="dosya" />
+    <br />
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</div>
+}
+
+

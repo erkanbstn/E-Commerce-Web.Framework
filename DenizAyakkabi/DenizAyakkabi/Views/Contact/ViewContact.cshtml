@@ -1,0 +1,32 @@
+﻿@model EntityLayer.Concrete.Contact 
+@{
+    ViewBag.Title = "ViewContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h3 style="margin-left:15px">ILETISIM BİLGİLERİ</h3>
+<br />
+<div style="margin-left:15px" class="form-group">
+    @Html.Label("ID")
+    @Html.TextBoxFor(n => n.ContactID, new { @class = "form-control" })
+    <br />
+    <br />
+    @Html.Label("Gönderen")
+    @Html.TextBoxFor(n => n.FullName, new { @class = "form-control" })
+    <br />
+    <br />
+    @Html.Label("Email")
+    @Html.TextBoxFor(n => n.Email, new { @class = "form-control" })
+    <br />
+    <br />
+    @Html.Label("Konu")
+    @Html.TextBoxFor(n => n.Subject, new { @class = "form-control" })
+    <br />
+    <br />
+    @Html.Label("Mesaj")
+    @Html.TextAreaFor(n => n.Message, new { @class = "form-control" })
+    <br />
+    <br />
+</div>
+

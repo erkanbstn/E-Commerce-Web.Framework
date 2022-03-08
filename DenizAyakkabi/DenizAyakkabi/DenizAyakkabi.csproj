@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{567D4FB0-63E0-42B8-AB78-BF3DEA9388AC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DenizAyakkabi</RootNamespace>
+    <AssemblyName>DenizAyakkabi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44336</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.10.3.6\lib\netstandard2.0\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\MainPageController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\Ayak.jpg" />
+    <Content Include="Images\Ayak1.jpg" />
+    <Content Include="Images\Ayak2.jpg" />
+    <Content Include="Images\Ayak3.jpg" />
+    <Content Include="Images\Ayak4.jpg" />
+    <Content Include="Images\Ayak5.jpg" />
+    <Content Include="Images\Ayak6.jpg" />
+    <Content Include="WebTemplate\404.html" />
+    <Content Include="WebTemplate\about.html" />
+    <Content Include="WebTemplate\blog-post.html" />
+    <Content Include="WebTemplate\blog.html" />
+    <Content Include="WebTemplate\cart.html" />
+    <Content Include="WebTemplate\checkout.html" />
+    <Content Include="WebTemplate\contact-us.html" />
+    <Content Include="WebTemplate\contact.php" />
+    <Content Include="WebTemplate\css\navigation-menu.css" />
+    <Content Include="WebTemplate\css\plugins.css" />
+    <Content Include="WebTemplate\css\shortcode.css" />
+    <Content Include="WebTemplate\fonts\montserrat-light.svg" />
+    <Content Include="WebTemplate\fonts\montserrat-semibold-webfont.svg" />
+    <Content Include="WebTemplate\images\404.png" />
+    <Content Include="WebTemplate\images\about.jpg" />
+    <Content Include="WebTemplate\images\apple-touch-icon-114x114-precomposed.png" />
+    <Content Include="WebTemplate\images\apple-touch-icon-57x57-precomposed.png" />
+    <Content Include="WebTemplate\images\avtar-1.jpg" />
+    <Content Include="WebTemplate\images\avtar-2.jpg" />
+    <Content Include="WebTemplate\images\avtar-3.jpg" />
+    <Content Include="WebTemplate\images\blog-1.jpg" />
+    <Content Include="WebTemplate\images\blog-2.jpg" />
+    <Content Include="WebTemplate\images\blog-3.jpg" />
+    <Content Include="WebTemplate\images\blog-4.jpg" />
+    <Content Include="WebTemplate\images\blog-5.jpg" />
+    <Content Include="WebTemplate\images\blog-6.jpg" />
+    <Content Include="WebTemplate\images\blog-7.jpg" />
+    <Content Include="WebTemplate\images\category-1.jpg" />
+    <Content Include="WebTemplate\images\category-2.jpg" />
+    <Content Include="WebTemplate\images\category-3.jpg" />
+    <Content Include="WebTemplate\images\category-4.jpg" />
+    <Content Include="WebTemplate\images\category-5.jpg" />
+    <Content Include="WebTemplate\images\category-6.jpg" />
+    <Content Include="WebTemplate\images\category-7.jpg" />
+    <Content Include="WebTemplate\images\client-1.png" />
+    <Content Include="WebTemplate\images\client-2.png" />
+    <Content Include="WebTemplate\images\client-3.png" />
+    <Content Include="WebTemplate\images\client-4.png" />
+    <Content Include="WebTemplate\images\client-5.png" />
+    <Content Include="WebTemplate\images\collection-1.jpg" />
+    <Content Include="WebTemplate\images\collection-2.jpg" />
+    <Content Include="WebTemplate\images\collection-3.jpg" />
+    <Content Include="WebTemplate\images\collection-4.jpg" />
+    <Content Include="WebTemplate\images\collection-5.jpg" />
+    <Content Include="WebTemplate\images\deal-1.png" />
+    <Content Include="WebTemplate\images\deal-2.png" />
+    <Content Include="WebTemplate\images\deal-3.jpg" />
+    <Content Include="WebTemplate\images\deal-4.jpg" />
+    <Content Include="WebTemplate\images\deal-5.jpg" />
+    <Content Include="WebTemplate\images\deal-6.jpg" />
+    <Content Include="WebTemplate\images\deal-7.jpg" />
+    <Content Include="WebTemplate\images\deal-8.jpg" />
+    <Content Include="WebTemplate\images\deal-9.jpg" />
+    <Content Include="WebTemplate\images\favicon.ico" />
+    <Content Include="WebTemplate\images\ftr-bg.jpg" />
+    <Content Include="WebTemplate\images\ftr-latestpost-1.jpg" />
+    <Content Include="WebTemplate\images\ftr-latestpost-2.jpg" />
+    <Content Include="WebTemplate\images\ftr-latestpost-3.jpg" />
+    <Content Include="WebTemplate\images\ftr-latestpost-4.jpg" />
+    <Content Include="WebTemplate\images\ftr-latestpost-5.jpg" />
+    <Content Include="WebTemplate\images\ftr-latestpost-6.jpg" />
+    <Content Include="WebTemplate\images\latest-post-1.jpg" />
+    <Content Include="WebTemplate\images\latest-post-2.jpg" />
+    <Content Include="WebTemplate\images\latest-post-3.jpg" />
+    <Content Include="WebTemplate\images\marker.png" />
+    <Content Include="WebTemplate\images\paypal.jpg" />
+    <Content Include="WebTemplate\images\product-1.jpg" />
+    <Content Include="WebTemplate\images\product-10.jpg" />
+    <Content Include="WebTemplate\images\product-11.jpg" />
+    <Content Include="WebTemplate\images\product-12.jpg" />
+    <Content Include="WebTemplate\images\product-13.jpg" />
+    <Content Include="WebTemplate\images\product-14.jpg" />
+    <Content Include="WebTemplate\images\product-15.jpg" />
+    <Content Include="WebTemplate\images\product-16.jpg" />
+    <Content Include="WebTemplate\images\product-17.jpg" />
+    <Content Include="WebTemplate\images\product-2.jpg" />
+    <Content Include="WebTemplate\images\product-3.jpg" />
+    <Content Include="WebTemplate\images\product-4.jpg" />
+    <Content Include="WebTemplate\images\product-5.jpg" />
+    <Content Include="WebTemplate\images\product-6.jpg" />
+    <Content Include="WebTemplate\images\product-7.jpg" />
+    <Content Include="WebTemplate\images\product-8.jpg" />
+    <Content Include="WebTemplate\images\product-9.jpg" />
+    <Content Include="WebTemplate\images\product-item.jpg" />
+    <Content Include="WebTemplate\images\product-wishlist-1.jpg" />
+    <Content Include="WebTemplate\images\product-wishlist-2.jpg" />
+    <Content Include="WebTemplate\images\product.jpg" />
+    <Content Include="WebTemplate\images\section-seprator.png" />
+    <Content Include="WebTemplate\images\selling-1.jpg" />
+    <Content Include="WebTemplate\images\selling-2.jpg" />
+    <Content Include="WebTemplate\images\selling-3.jpg" />
+    <Content Include="WebTemplate\images\selling-4.jpg" />
+    <Content Include="WebTemplate\images\selling-5.jpg" />
+    <Content Include="WebTemplate\images\selling-6.jpg" />
+    <Content Include="WebTemplate\images\selling-bg.jpg" />
+    <Content Include="WebTemplate\images\slider-1.jpg" />
+    <Content Include="WebTemplate\images\slider-2.jpg" />
+    <Content Include="WebTemplate\images\team-1.jpg" />
+    <Content Include="WebTemplate\images\team-2.jpg" />
+    <Content Include="WebTemplate\images\team-3.jpg" />
+    <Content Include="WebTemplate\images\team-4.jpg" />
+    <Content Include="WebTemplate\images\testi-1.png" />
+    <Content Include="WebTemplate\images\testi-bg.jpg" />
+    <Content Include="WebTemplate\images\testi.jpg" />
+    <Content Include="WebTemplate\index.html" />
+    <Content Include="WebTemplate\index2.html" />
+    <Content Include="WebTemplate\js\functions.js" />
+    <Content Include="WebTemplate\js\html5\respond.min.js" />
+    <Content Include="WebTemplate\js\jquery.min.js" />
+    <Content Include="WebTemplate\libraries\fonts\ElegantIcons.svg" />
+    <Content Include="WebTemplate\libraries\fonts\fontawesome-webfont.svg" />
+    <Content Include="WebTemplate\libraries\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="WebTemplate\libraries\fonts\Stroke-Gap-Icons.svg" />
+    <Content Include="WebTemplate\libraries\jquery.countdown.min.js" />
+    <Content Include="WebTemplate\libraries\lib.css" />
+    <Content Include="WebTemplate\libraries\lib.js" />
+    <Content Include="WebTemplate\revolution\assets\coloredbg.png" />
+    <Content Include="WebTemplate\revolution\assets\gridtile.png" />
+    <Content Include="WebTemplate\revolution\assets\gridtile_3x3.png" />
+    <Content Include="WebTemplate\revolution\assets\gridtile_3x3_white.png" />
+    <Content Include="WebTemplate\revolution\assets\gridtile_white.png" />
+    <Content Include="WebTemplate\revolution\assets\loader.gif" />
+    <Content Include="WebTemplate\revolution\assets\sources\fb.png" />
+    <Content Include="WebTemplate\revolution\assets\sources\fr.png" />
+    <Content Include="WebTemplate\revolution\assets\sources\ig.png" />
+    <Content Include="WebTemplate\revolution\assets\sources\post.png" />
+    <Content Include="WebTemplate\revolution\assets\sources\revolution_slide1.png" />
+    <Content Include="WebTemplate\revolution\assets\sources\revolution_slide2.png" />
+    <Content Include="WebTemplate\revolution\assets\sources\tw.png" />
+    <Content Include="WebTemplate\revolution\assets\sources\vm.png" />
+    <Content Include="WebTemplate\revolution\assets\sources\wc.png" />
+    <Content Include="WebTemplate\revolution\assets\sources\yt.png" />
+    <Content Include="WebTemplate\revolution\css\closedhand.cur" />
+    <Content Include="WebTemplate\revolution\css\index.php" />
+    <Content Include="WebTemplate\revolution\css\layers.css" />
+    <Content Include="WebTemplate\revolution\css\navigation-skins\ares.css" />
+    <Content Include="WebTemplate\revolution\css\navigation-skins\custom.css" />
+    <Content Include="WebTemplate\revolution\css\navigation-skins\dione.css" />
+    <Content Include="WebTemplate\revolution\css\navigation-skins\erinyen.css" />
+    <Content Include="WebTemplate\revolution\css\navigation-skins\gyges.css" />
+    <Content Include="WebTemplate\revolution\css\navigation-skins\hades.css" />
+    <Content Include="WebTemplate\revolution\css\navigation-skins\hebe.css" />
+    <Content Include="WebTemplate\revolution\css\navigation-skins\hephaistos.css" />
+    <Content Include="WebTemplate\revolution\css\navigation-skins\hermes.css" />
+    <Content Include="WebTemplate\revolution\css\navigation-skins\hesperiden.css" />
+    <Content Include="WebTemplate\revolution\css\navigation-skins\metis.css" />
+    <Content Include="WebTemplate\revolution\css\navigation-skins\persephone.css" />
+    <Content Include="WebTemplate\revolution\css\navigation-skins\uranus.css" />
+    <Content Include="WebTemplate\revolution\css\navigation-skins\zeus.css" />
+    <Content Include="WebTemplate\revolution\css\navigation.css" />
+    <Content Include="WebTemplate\revolution\css\openhand.cur" />
+    <Content Include="WebTemplate\revolution\css\settings.css" />
+    <Content Include="WebTemplate\revolution\fonts\font-awesome\css\font-awesome.css" />
+    <Content Include="WebTemplate\revolution\fonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="WebTemplate\revolution\fonts\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="WebTemplate\revolution\fonts\font-awesome\index.php" />
+    <Content Include="WebTemplate\revolution\fonts\index.php" />
+    <Content Include="WebTemplate\revolution\fonts\pe-icon-7-stroke\css\helper.css" />
+    <Content Include="WebTemplate\revolution\fonts\pe-icon-7-stroke\css\index.php" />
+    <Content Include="WebTemplate\revolution\fonts\pe-icon-7-stroke\css\pe-icon-7-stroke.css" />
+    <Content Include="WebTemplate\revolution\fonts\pe-icon-7-stroke\fonts\index.php" />
+    <Content Include="WebTemplate\revolution\fonts\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.svg" />
+    <Content Include="WebTemplate\revolution\fonts\pe-icon-7-stroke\index.php" />
+    <Content Include="WebTemplate\revolution\fonts\revicons\index.php" />
+    <Content Include="WebTemplate\revolution\fonts\revicons\revicons.svg" />
+    <Content Include="WebTemplate\revolution\index.php" />
+    <Content Include="WebTemplate\revolution\js\extensions\index.php" />
+    <Content Include="WebTemplate\revolution\js\extensions\revolution.extension.actions.min.js" />
+    <Content Include="WebTemplate\revolution\js\extensions\revolution.extension.carousel.min.js" />
+    <Content Include="WebTemplate\revolution\js\extensions\revolution.extension.kenburn.min.js" />
+    <Content Include="WebTemplate\revolution\js\extensions\revolution.extension.layeranimation.min.js" />
+    <Content Include="WebTemplate\revolution\js\extensions\revolution.extension.migration.min.js" />
+    <Content Include="WebTemplate\revolution\js\extensions\revolution.extension.navigation.min.js" />
+    <Content Include="WebTemplate\revolution\js\extensions\revolution.extension.parallax.min.js" />
+    <Content Include="WebTemplate\revolution\js\extensions\revolution.extension.slideanims.min.js" />
+    <Content Include="WebTemplate\revolution\js\extensions\revolution.extension.video.min.js" />
+    <Content Include="WebTemplate\revolution\js\extensions\source\index.php" />
+    <Content Include="WebTemplate\revolution\js\extensions\source\revolution.extension.actions.js" />
+    <Content Include="WebTemplate\revolution\js\extensions\source\revolution.extension.carousel.js" />
+    <Content Include="WebTemplate\revolution\js\extensions\source\revolution.extension.kenburn.js" />
+    <Content Include="WebTemplate\revolution\js\extensions\source\revolution.extension.layeranimation.js" />
+    <Content Include="WebTemplate\revolution\js\extensions\source\revolution.extension.migration.js" />
+    <Content Include="WebTemplate\revolution\js\extensions\source\revolution.extension.navigation.js" />
+    <Content Include="WebTemplate\revolution\js\extensions\source\revolution.extension.parallax.js" />
+    <Content Include="WebTemplate\revolution\js\extensions\source\revolution.extension.slideanims.js" />
+    <Content Include="WebTemplate\revolution\js\extensions\source\revolution.extension.video.js" />
+    <Content Include="WebTemplate\revolution\js\index.php" />
+    <Content Include="WebTemplate\revolution\js\jquery.themepunch.enablelog.js" />
+    <Content Include="WebTemplate\revolution\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="WebTemplate\revolution\js\jquery.themepunch.tools.min.js" />
+    <Content Include="WebTemplate\revolution\js\source\index.php" />
+    <Content Include="WebTemplate\revolution\js\source\jquery.themepunch.enablelog.js" />
+    <Content Include="WebTemplate\revolution\js\source\jquery.themepunch.revolution.js" />
+    <Content Include="WebTemplate\revolution\js\source\jquery.themepunch.tools.min.js" />
+    <Content Include="WebTemplate\revolution\php\facebook\class-facebook.php" />
+    <Content Include="WebTemplate\revolution\php\flickr\class-flickr.php" />
+    <Content Include="WebTemplate\revolution\php\instagram\class-instagram.php" />
+    <Content Include="WebTemplate\revolution\php\twitter\class-twitter.php" />
+    <Content Include="WebTemplate\revolution\php\twitter\connection\Application.php" />
+    <Content Include="WebTemplate\revolution\php\twitter\connection\ConnectionAbstract.php" />
+    <Content Include="WebTemplate\revolution\php\twitter\connection\User.php" />
+    <Content Include="WebTemplate\revolution\php\twitter\RestApi.php" />
+    <Content Include="WebTemplate\revolution\php\vimeo\class-vimeo.php" />
+    <Content Include="WebTemplate\revolution\php\youtube\class-youtube.php" />
+    <Content Include="WebTemplate\shop-single.html" />
+    <Content Include="WebTemplate\shop.html" />
+    <Content Include="WebTemplate\style.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="WebTemplate\fonts\montserrat-light.eot" />
+    <Content Include="WebTemplate\fonts\montserrat-light.ttf" />
+    <Content Include="WebTemplate\fonts\montserrat-light.woff" />
+    <Content Include="WebTemplate\fonts\montserrat-light.woff2" />
+    <Content Include="WebTemplate\fonts\montserrat-semibold-webfont.eot" />
+    <Content Include="WebTemplate\fonts\montserrat-semibold-webfont.ttf" />
+    <Content Include="WebTemplate\fonts\montserrat-semibold-webfont.woff" />
+    <Content Include="WebTemplate\fonts\montserrat-semibold-webfont.woff2" />
+    <Content Include="WebTemplate\images\Thumbs.db" />
+    <Content Include="WebTemplate\libraries\fonts\ElegantIcons.eot" />
+    <Content Include="WebTemplate\libraries\fonts\ElegantIcons.ttf" />
+    <Content Include="WebTemplate\libraries\fonts\ElegantIcons.woff" />
+    <Content Include="WebTemplate\libraries\fonts\fontawesome-webfont.eot" />
+    <Content Include="WebTemplate\libraries\fonts\fontawesome-webfont.ttf" />
+    <Content Include="WebTemplate\libraries\fonts\fontawesome-webfont.woff" />
+    <Content Include="WebTemplate\libraries\fonts\fontawesome-webfont.woff2" />
+    <Content Include="WebTemplate\libraries\fonts\FontAwesome.otf" />
+    <Content Include="WebTemplate\libraries\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="WebTemplate\libraries\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="WebTemplate\libraries\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="WebTemplate\libraries\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="WebTemplate\libraries\fonts\Stroke-Gap-Icons.eot" />
+    <Content Include="WebTemplate\libraries\fonts\Stroke-Gap-Icons.ttf" />
+    <Content Include="WebTemplate\libraries\fonts\Stroke-Gap-Icons.woff" />
+    <Content Include="WebTemplate\revolution\.DS_Store" />
+    <Content Include="WebTemplate\revolution\assets\.DS_Store" />
+    <Content Include="WebTemplate\revolution\css\.DS_Store" />
+    <Content Include="WebTemplate\revolution\fonts\.DS_Store" />
+    <Content Include="WebTemplate\revolution\fonts\font-awesome\.DS_Store" />
+    <Content Include="WebTemplate\revolution\fonts\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="WebTemplate\revolution\fonts\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="WebTemplate\revolution\fonts\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="WebTemplate\revolution\fonts\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="WebTemplate\revolution\fonts\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="WebTemplate\revolution\fonts\pe-icon-7-stroke\.DS_Store" />
+    <Content Include="WebTemplate\revolution\fonts\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.eot" />
+    <Content Include="WebTemplate\revolution\fonts\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.ttf" />
+    <Content Include="WebTemplate\revolution\fonts\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.woff" />
+    <Content Include="WebTemplate\revolution\fonts\revicons\revicons.eot" />
+    <Content Include="WebTemplate\revolution\fonts\revicons\revicons.ttf" />
+    <Content Include="WebTemplate\revolution\fonts\revicons\revicons.woff" />
+    <Content Include="WebTemplate\revolution\info.cfg" />
+    <Content Include="WebTemplate\revolution\php\.DS_Store" />
+    <Content Include="WebTemplate\revolution\php\twitter\.DS_Store" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Category\MainCategory.cshtml" />
+    <Content Include="Views\Product\MainProduct.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Category\AddCategory.cshtml" />
+    <Content Include="Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Views\Product\AddProduct.cshtml" />
+    <Content Include="Views\Product\UpdateProduct.cshtml" />
+    <Content Include="Views\About\MainAbout.cshtml" />
+    <Content Include="Views\About\UpdateAbout.cshtml" />
+    <Content Include="Views\Contact\MainContact.cshtml" />
+    <Content Include="Views\Contact\ViewContact.cshtml" />
+    <Content Include="Views\MainPage\MainPage.cshtml" />
+    <Content Include="Views\MainPage\About.cshtml" />
+    <Content Include="Views\MainPage\Contact.cshtml" />
+    <Content Include="Views\MainPage\Product.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{301b10ae-b007-4537-aef6-c037dc4e3d4f}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{9a969314-9fe9-45ff-9d62-35ef05462065}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
+      <Project>{18cf898e-d96b-4b69-a0b3-db674b5477da}</Project>
+      <Name>EntityLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55597</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44336/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

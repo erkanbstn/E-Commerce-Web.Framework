@@ -1,0 +1,57 @@
+﻿@using EntityLayer.Concrete
+@model List<About>
+@{
+    ViewBag.Title = "MainAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h3 style="margin-left:15px">HAKKIMIZDA BILGILERI</h3>
+<br />
+<table class="table table-hover" style="margin-left:15px">
+    <tr>
+        <th>ID</th>
+        <th>Açıklama 1</th>
+        <th>Açıklama 2</th>
+        <th>Başlık 1</th>
+        <th>Başlık 2</th>
+        <th>Başlık 3</th>
+        <th>Başlık 4</th>
+        <th>Başlık 5</th>
+        <th>Düzenle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.AboutID
+            </td>
+            <td>
+                @item.Description
+            </td>
+            <td>
+                @item.Description2
+            </td>
+            <td>
+                @item.Title1
+            </td>
+            <td>
+                @item.Title2
+            </td>
+            <td>
+                @item.Title3
+            </td>
+            <td>
+                @item.Title4
+            </td>
+            <td>
+                @item.Title5
+            </td>
+            <td>
+                <a href="~/About/UpdateAbout/@item.AboutID" class="btn btn-warning">Düzenle</a>
+
+            </td>
+        </tr>
+    }
+</table>
+
